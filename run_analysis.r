@@ -60,3 +60,4 @@ names(Data)<-gsub("BodyBody", "Body", names(Data))
 Data2<-aggregate(. ~subject + activity, Data, mean)
 Data2<-Data2[order(Data2$subject,Data2$activity),]
 write.table(Data2, file = paste(dest,"tidydata.txt", sep="/"),row.name=FALSE)
+
